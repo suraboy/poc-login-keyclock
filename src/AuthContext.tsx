@@ -110,29 +110,31 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const login = () => {
     keycloak.login({
-      redirectUri: window.location.origin,
+      redirectUri: import.meta.env.VITE_APP_URL || window.location.origin,
     });
   };
 
   const logout = () => {
     keycloak.logout({
-      redirectUri: window.location.origin,
+      redirectUri: import.meta.env.VITE_APP_URL || window.location.origin,
     });
   };
 
   const register = () => {
     keycloak.register({
-      redirectUri: window.location.origin,
+      redirectUri: import.meta.env.VITE_APP_URL || window.location.origin,
     });
   };
 
   const resetPassword = (username?: string) => {
+    const baseUrl = import.meta.env.VITE_APP_URL || window.location.origin;
+    
     if (username) {
       // If username is provided, use the direct reset password flow
       const params = new URLSearchParams({
         response_type: 'code',
         client_id: keycloak.clientId!,
-        redirect_uri: window.location.origin,
+        redirect_uri: baseUrl,
         scope: 'openid',
         kc_action: 'UPDATE_PASSWORD',
         login_hint: username
@@ -142,7 +144,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     } else {
       // If no username, go to login page where user can click "Forgot Password?"
       keycloak.login({
-        redirectUri: window.location.origin,
+        redirectUri: baseUrl,
       });
     }
   };

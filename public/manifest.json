@@ -1,0 +1,25 @@
+{
+  "name": "Keycloak Login POC",
+  "short_name": "Keycloak POC",
+  "description": "A proof-of-concept application demonstrating Keycloak authentication integration",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["authentication", "security", "business"],
+  "lang": "en",
+  "dir": "ltr"
+}

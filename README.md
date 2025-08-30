@@ -11,6 +11,11 @@ A modern React application demonstrating Keycloak authentication integration wit
 - ✅ **Responsive Design**: Mobile-friendly interface with modern styling
 - ✅ **Token Management**: Automatic token refresh and handling
 - ✅ **TypeScript**: Full TypeScript support for better development experience
+- ✅ **PWA Support**: Progressive Web App with offline capabilities
+- ✅ **Web Optimized**: Production-ready with performance optimizations
+- ✅ **Multi-Environment**: Support for development, staging, and production
+- ✅ **Docker Ready**: Containerized deployment support
+- ✅ **Auto Deployment**: CI/CD pipelines for major hosting platforms
 
 ## Prerequisites
 
@@ -104,6 +109,41 @@ npm run setup-client
 **Note**: If you see "Initializing application..." for more than 15 seconds, the app will automatically show setup instructions.
 
 The application will be available at `http://localhost:5173`
+
+## 🌐 Web Deployment
+
+This application is optimized for web deployment on various platforms:
+
+### Quick Deploy
+
+```bash
+# Build for production
+npm run build:prod
+
+# Preview production build
+npm run preview
+
+# Deploy using automated script
+npm run deploy
+```
+
+### Supported Platforms
+
+- **Netlify**: Automatic deployment with `netlify.toml`
+- **Vercel**: One-click deployment with `vercel.json`
+- **GitHub Pages**: Automated CI/CD with GitHub Actions
+- **Docker**: Containerized deployment with `Dockerfile`
+- **VPS/Server**: Traditional hosting with Nginx configuration
+
+### Environment Setup
+
+Copy `.env.production` and update with your values:
+```env
+VITE_KEYCLOAK_URL=https://your-keycloak-domain.com
+VITE_APP_URL=https://your-domain.com
+```
+
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Usage
 
