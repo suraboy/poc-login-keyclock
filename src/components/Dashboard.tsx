@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth } from '../AuthContext';
+import BackButton from './BackButton';
 import './Dashboard.css';
 
 const Dashboard: React.FC = () => {
@@ -27,7 +28,14 @@ const Dashboard: React.FC = () => {
     <div className="dashboard-container">
       <div className="dashboard-header">
         <div className="header-content">
-          <h1>Dashboard</h1>
+          <div className="header-left">
+            <BackButton 
+              fallbackRoute="/login" 
+              className="minimal"
+              text="Back"
+            />
+            <h1>Dashboard</h1>
+          </div>
           <button onClick={handleLogout} className="logout-button">
             Logout
           </button>

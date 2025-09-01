@@ -1,0 +1,668 @@
+/* Red Theme Design */
+:root {
+  --primary-color: #d32f2f;
+  --primary-hover: #b71c1c;
+  --border-color: #e5e7eb;
+  --text-color: #1f2937;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 6px 12px rgba(211, 47, 47, 0.2);
+}
+
+/* Base Layout - Original Keycloak Style */
+.login-pf {
+  background: var(--bg-color);
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.login-pf-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg-color);
+}
+
+.card-pf {
+  background: var(--card-bg);
+  border-radius: 2px;
+  box-shadow: var(--shadow);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+}
+
+/* Back Button */
+.back-button-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+/* Login Card - Red Theme Style */
+.login-card, .card-pf {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+/* Login Title */
+.login-title, .kc-page-title {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+/* Header wrapper - simplified */
+#kc-header-wrapper {
+  display: none;
+}
+
+/* Logo Container - Centered in Modal */
+.logo-container {
+  text-align: center;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+/* MSP Logo Image - Centered */
+.mx-image.mx-name-image3.logo-red.img-responsive {
+  max-width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.msp-brand {
+  color: var(--primary-color);
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.brand-line {
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Button System - Red Theme Enhanced */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Primary Button - Red */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  border-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(211, 47, 47, 0.2);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-hover), #8b0000);
+  border-color: var(--primary-hover);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(211, 47, 47, 0.3);
+}
+
+/* Block button */
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 18px;
+}
+
+/* Form Elements - Red Theme Enhanced */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Input Field Styling - Standard Keycloak Style */
+.form-control {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--text-color);
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+/* Error message styling */
+.input-error {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.link-forgot-password {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.link-forgot-password:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Checkbox styling */
+.checkbox {
+  margin: 15px 0;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: var(--primary-color);
+}
+
+/* Error Messages - Original Style */
+.error-message, .alert-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 2px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+/* Success Messages */
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  border-radius: 2px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+/* Links */
+a, .link-secondary {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover, .link-secondary:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Basic Layout */
+#kc-form-wrapper {
+  width: 100%;
+}
+
+#kc-form {
+  width: 100%;
+}
+
+/* Override defaults */
+body, html {
+  background: var(--bg-color) !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .login-card, .card-pf {
+    padding: 20px;
+    margin: 10px;
+    max-width: none;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Mobile logo adjustments */
+  .logo-container {
+    margin-bottom: 20px;
+  }
+  
+  .mx-image.mx-name-image3.logo-red.img-responsive {
+    max-width: 60px;
+  }
+  
+  .msp-brand {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  
+  .brand-line {
+    width: 40px;
+    height: 2px;
+  }
+  
+  /* Mobile forgot password link */
+  .forgot-password-link {
+    text-align: center;
+  }
+  
+  .link-forgot-password {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 24px 20px;
+    margin: 16px;
+    border-radius: 8px;
+  }
+
+  .back-button-container {
+    top: 12px;
+    left: 12px;
+  }
+
+  .msp-title {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .brand-accent-line {
+    width: 60px;
+    height: 3px;
+  }
+
+  .login-title {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    padding: 16px 24px;
+    font-size: 16px;
+    min-height: 48px; /* Larger touch target on mobile */
+  }
+
+  .form-control {
+    padding: 14px 16px;
+    font-size: 16px; /* Prevent zoom on iOS */
+    min-height: 48px;
+  }
+}
+
+/* Modal System */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  transform: scale(0.9) translateY(20px);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-gray);
+}
+
+.modal-overlay.active .modal {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 24px 24px 0;
+  border-bottom: 1px solid var(--border-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+
+.modal-title {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-title::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background: var(--primary-red);
+  border-radius: 2px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: rgba(211, 47, 47, 0.1);
+  color: var(--primary-red);
+}
+
+.modal-close:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  max-height: calc(90vh - 140px);
+}
+
+.modal-body p {
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.modal-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 16px 24px 24px;
+  border-top: 1px solid var(--border-gray);
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.modal-footer .btn {
+  min-width: 100px;
+}
+
+/* Modal Variants */
+.modal.modal-danger .modal-title::before {
+  background: var(--primary-red);
+}
+
+.modal.modal-success .modal-title::before {
+  background: #059669;
+}
+
+.modal.modal-warning .modal-title::before {
+  background: #d97706;
+}
+
+.modal.modal-info .modal-title::before {
+  background: #0284c7;
+}
+
+/* Confirmation Modal */
+.modal-confirm {
+  max-width: 400px;
+}
+
+.modal-confirm .modal-body {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.modal-confirm .modal-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.modal-confirm.modal-danger .modal-icon {
+  background: rgba(211, 47, 47, 0.1);
+  color: var(--primary-red);
+}
+
+.modal-confirm.modal-success .modal-icon {
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+}
+
+/* Loading Modal */
+.modal-loading .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 24px;
+}
+
+.modal-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--border-gray);
+  border-top: 3px solid var(--primary-red);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form Modal */
+.modal-form .form-group {
+  margin-bottom: 20px;
+}
+
+.modal-form .form-control {
+  width: 100%;
+}
+
+/* Mobile Modal Responsiveness */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 16px;
+  }
+
+  .modal {
+    max-width: none;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .modal-header {
+    padding: 20px 20px 0;
+    padding-bottom: 12px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .modal-footer {
+    padding: 12px 20px 20px;
+    flex-direction: column-reverse;
+  }
+
+  .modal-footer .btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-header {
+    padding: 16px 16px 0;
+    padding-bottom: 12px;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-footer {
+    padding: 12px 16px 16px;
+  }
+
+  .modal-confirm .modal-body {
+    padding: 24px 16px;
+  }
+
+  .modal-confirm .modal-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    border-width: 3px;
+  }
+
+  .form-control:focus {
+    box-shadow: 0 0 0 4px var(--focus-ring);
+  }
+
+  .brand-accent-line {
+    height: 5px;
+  }
+
+  .modal {
+    border-width: 2px;
+  }
+
+  .modal-title::before {
+    width: 6px;
+  }
+}

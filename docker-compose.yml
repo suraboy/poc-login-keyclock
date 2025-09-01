@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   keycloak:
@@ -12,6 +12,7 @@ services:
     command: start-dev
     volumes:
       - keycloak_data:/opt/keycloak/data
+      - ./keycloak-theme/login:/opt/keycloak/themes/custom/login
 
 volumes:
   keycloak_data:

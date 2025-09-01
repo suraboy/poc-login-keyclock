@@ -261,6 +261,18 @@
   padding: 30px;
 }
 
+.error-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.error-header .error-icon {
+  font-size: 48px;
+  margin: 0;
+}
+
 .error-icon {
   font-size: 48px;
   margin-bottom: 20px;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../AuthContext';
+import BackButton from './BackButton';
 import './Login.css';
 
 const Login: React.FC = () => {
@@ -42,7 +43,14 @@ const Login: React.FC = () => {
       <div className="login-container">
         <div className="login-card">
           <div className="error-section">
-            <div className="error-icon">⚠️</div>
+            <div className="error-header">
+              <BackButton 
+                fallbackRoute="/" 
+                className="minimal small"
+                text="Home"
+              />
+              <div className="error-icon">⚠️</div>
+            </div>
             <h2>Setup Required</h2>
             <p className="error-message">{error}</p>
             
